@@ -10,30 +10,33 @@ class Directory extends React.Component {
         this.state = {
             sections: [
             {
-                title: 'hats',
-                imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+                title: 'shirts',
+                imageUrl: 'https://www.wolczanka.pl/product_picture/fill_1800x2812/e641b2a7c54ca2fcc3bdf68c508b36ad.jpg',
+                size: 'vertical',
                 id: 1
             },
             {
-                title: 'jackets',
-                imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+                title: 'pants',
+                imageUrl: 'https://www.wolczanka.pl/product_picture/fill_1800x2812/db62397f423f50bf9a686303f48b8dc4.jpg',
+                size: 'vertical',
                 id: 2
             },
             {
-                title: 'sneakers',
-                imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+                title: 'accessories',
+                imageUrl: 'https://www.wolczanka.pl/product_picture/fill_1800x2812/280f1c5ef58d75e39b0d38999f2957d0.jpg',
+                size: 'vertical',
                 id: 3
             },
             {
-                title: 'womens',
-                imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
-                size: 'large',
+                title: 'women',
+                imageUrl: 'https://i.imgur.com/i8awq5F.png',
+                size: 'horizontal',
                 id: 4
             },
             {
-                title: 'mens',
-                imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
-                size: 'large',
+                title: 'men',
+                imageUrl: 'https://i.imgur.com/oK5T8Kf.jpg',
+                size: 'horizontal',
                 id: 5
             }]
         }
@@ -42,7 +45,7 @@ class Directory extends React.Component {
         return (
             <div className='directory'>
                 {this.state.sections.map(({title, imageUrl, id, size}) => (
-                        <MenuItem key={id} title={title} imageUrl={imageUrl} size={size}/>
+                        <MenuItem key={id} title={title} imageUrl={imageUrl} size={size} id={id}/>
                     ))}
             </div>
         );
